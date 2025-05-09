@@ -30,10 +30,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en">
-      <CrispProvider/>
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CrispProvider/>
         <ModalProvider/>
         <ToasterProvider/>
         {children}

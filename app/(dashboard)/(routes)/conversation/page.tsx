@@ -17,7 +17,7 @@ import { formSchema } from "./constants";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
-  FormControl,
+  FormControl, 
   FormField,
   FormItem
 } from "@/components/ui/form";
@@ -25,6 +25,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Empty } from '@/components/empty';
 import { cn } from '@/lib/utils';
+import Markdown from 'react-markdown';
 import { UserAvatar } from '@/components/user-avatar';
 import { BotAvatar } from '@/components/bot-avatar';
 
@@ -127,7 +128,9 @@ const ConversationPage = () => {
                         : "bg-gray-200 text-gray-900 rounded-tl-none",
                     )}
                   >
-                    <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                    <Markdown>
+                      {message.content}
+                      </Markdown>
                   </div>
                 </div>
               </div>
