@@ -169,7 +169,7 @@ const CodePage = () => {
                                   </div>
                                   <SyntaxHighlighter
                                     language={match[1]}
-                                    // @ts-ignore
+                                    // @ts-expect-error
                                     style={atomDark}
                                     customStyle={{
                                       margin: 0,
